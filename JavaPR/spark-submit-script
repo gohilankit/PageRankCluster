@@ -1,0 +1,4 @@
+sudo $SPARK_HOME/bin/spark-submit --class spark.JavaPageRank --master local[2] <jar location> <input file location> <Number of iterations> <Output File location> <AWS Accecc Key ID> <awsSecretAccessKey>
+
+Example:
+sudo $SPARK_HOME/bin/spark-submit --class spark.JavaPageRank --master local[2] /home/ankit/Workstation/JavaWorkspace/PageRank/target/PageRank-1.0.jar  /home/ankit/Workstation/JavaWorkspace/PageRank/input 5 /home/ankit/Workstation/JavaWorkspace/PageRank/output ABCDEFGHI HFDFSHJSGJFGJFSGJFSGJFS
