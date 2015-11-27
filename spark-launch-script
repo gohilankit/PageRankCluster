@@ -1,0 +1,7 @@
+//Script to submit Spark job
+
+$SPARK_HOME/bin/./spark-submit --class "PageRank" --master local[2] <path to jar built after running sbt> <path to arcs file> <path to index file>
+
+Example:
+$SPARK_HOME/bin/./spark-submit --class "PageRank" --master local[2] target/scala-2.11/pagerank_2.11-1.0.jar /home/agohil/PageRankCluster/input/example_arcs /home/agohil/PageRankCluster/input/example_index
+
