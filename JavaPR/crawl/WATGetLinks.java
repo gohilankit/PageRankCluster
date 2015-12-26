@@ -52,7 +52,7 @@ public class WATGetLinks extends Configured implements Tool {
 		job.setJarByClass(WATGetLinks.class);
 		job.setNumReduceTasks(1);
 		
-		AWSCredentials as = new AWSCredentials("AKIAI6EHHAFK63EUD2SQ","p1ZQJBQsbMDms40Kzgcdq0V9w59HKQnfelZuPkn0");
+		AWSCredentials as = new AWSCredentials(AWSAccessKey, AWSSecretKey);
 		S3Service s3s = new RestS3Service(as);
 		String fn = "wat.paths";
 		S3Object f = s3s.getObject("ccwatcc", fn, null, null, null, null, null, null);
