@@ -1,23 +1,5 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one or more
- * contributor license agreements.  See the NOTICE file distributed with
- * this work for additional information regarding copyright ownership.
- * The ASF licenses this file to You under the Apache License, Version 2.0
- * (the "License"); you may not use this file except in compliance with
- * the License.  You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 
 package spark;
-
-
 
 import scala.Tuple2;
 
@@ -46,9 +28,6 @@ import java.util.regex.Pattern;
  * URL         neighbor URL
  * ...
  * where URL and their neighbors are separated by space(s).
- *
- * This is an example implementation for learning how to use Spark. For more conventional use,
- * please refer to org.apache.spark.graphx.lib.PageRank
  */
 public final class JavaPageRank {
   private static final Pattern SPACES = Pattern.compile("\\s+");
@@ -134,6 +113,7 @@ public final class JavaPageRank {
         System.out.println(tuple._1() + " has rank: " + tuple._2() + ".");
     }*/
     
+    //Save URLs to disk
     ranks.saveAsTextFile(args[2]);
     
 
